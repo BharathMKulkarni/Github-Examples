@@ -1,0 +1,20 @@
+name: Print Hello with Message
+on: 
+  workflow_dispatch:
+    inputs:
+      username:
+          type: string
+          description: "Enter your name"
+          required: true
+      message:
+          type: string
+          description: "Enter a short message"
+          required: true
+
+jobs:
+  print_hello_with_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: | 
+          echo "Hello ${{ inputs.username }} You wanted to say ${{ inputs.message }}
