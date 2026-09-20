@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: Print Message
         run: | 
-          echo "Hello ${{ inputs.username }} You wanted to say ${{ inputs.message }}
+          echo "Hello ${{ inputs.username }} You wanted to say ${{ inputs.message }}"
