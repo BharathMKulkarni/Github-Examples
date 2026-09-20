@@ -1,0 +1,15 @@
+name: Print Hello with Message
+on: [push]
+jobs:
+  print_hello:
+    if: ${{ github.repository == 'octo/octopus' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "Hello"
+  print_bye:
+    if: ${{ github.repository == 'BharathMKulkarni/Github-Examples' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "Bye"
