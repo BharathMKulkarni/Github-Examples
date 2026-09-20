@@ -1,4 +1,4 @@
-name: Print Hello with Message
+name: Print Message with Conditionals
 on: [push]
 jobs:
   print_hello:
@@ -12,4 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Message
-        run: echo "Bye"
+        run: echo "Hello"
+      - name: Print files
+        run: ls
