@@ -1,0 +1,12 @@
+name: Print files on webhook
+on:
+  repository_dispatch:
+    types: ["print"]
+jobs:
+  print_file_contents:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout action
+        uses: actions/checkout@v2
+      - name: print files
+        run: ls
